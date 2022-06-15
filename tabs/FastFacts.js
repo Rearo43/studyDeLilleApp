@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { Text } from '@ui-kitten/components';
 import {
   StyleSheet,
   View,
@@ -18,48 +17,10 @@ function Cards({ arr }) {
     <View>
       {arr.map((x) => (
         <View style={styles.centeredView}>
-          <Modal
-            animationType='slide'
-            transparent={true}
-            visible={modalVisible}
-            onRequestClose={() => {
-              Alert.alert('Modal has been closed.');
-              setModalVisible(!modalVisible);
-            }}
-          >
-            <View>
-              <View style={styles.modalView}>
-                <Text>Wine Summary</Text>
-                {/* If I want to switch to using button to go back move open Pressable tag down above Text Back "button" */}
-                <Pressable
-                  style={[styles.button]}
-                  onPress={() => setModalVisible(!modalVisible)}
-                >
-                  <Text>Columbia Valley AVA</Text>
-                  <Text>{x.name}</Text>
-                  <Text>
-                    Pairings: Seafood, grilled salmon, fried calamari,
-                    shellfish, seared tuna
-                  </Text>
-                  <Text>
-                    Tasting Notes: Watermelon, jolly rancher, passion fruit,
-                    nectarine, orange blossom
-                  </Text>
-                  <Text></Text>
-                  <Text style={styles.buttonClose}>Back</Text>
-                </Pressable>
-              </View>
-            </View>
-          </Modal>
           <Card key={x.name}>
             <Card.Title>{x.name}</Card.Title>
             <Card.Divider />
             <Text>{x.qs}</Text>
-            <Pressable onPress={() => setModalVisible(true)} style={styles.try}>
-              <Text style={[styles.buttonOpen, styles.boxShadow]}>
-                More Info
-              </Text>
-            </Pressable>
           </Card>
         </View>
       ))}
@@ -67,7 +28,7 @@ function Cards({ arr }) {
   );
 }
 
-export const Wines = () => {
+export const FastFacts = () => {
   return (
     <ScrollView>
       <Cards arr={data} />
@@ -121,6 +82,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#2196F3',
   },
 });
+
 
 const data = [
   {

@@ -30,13 +30,6 @@ function CreateTabs({ state, descriptors, navigation }) {
           }
         };
 
-        const onLongPress = () => {
-          navigation.emit({
-            type: 'tabLongPress',
-            target: route.key,
-          });
-        };
-
         return (
           <TouchableOpacity
             accessibilityRole='button'
@@ -44,7 +37,6 @@ function CreateTabs({ state, descriptors, navigation }) {
             accessibilityLabel={options.tabBarAccessibilityLabel}
             testID={options.tabBarTestID}
             onPress={onPress}
-            onLongPress={onLongPress}
             style={styles.tab}
           >
             <Text
@@ -76,15 +68,10 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: 'yellow',
     flexDirection: 'row',
-    // fontSize: 20,
-    // marginBottom: 20,
-    // width: 2,
   },
   tab: {
     flex: 1,
     height: 50,
-    // borderRightWidth: 10,
-    // borderRightColor: 'black'
   },
   text: {
     fontSize: 30,
