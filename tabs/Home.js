@@ -19,7 +19,7 @@ export const HomeScreen = () => {
         colors={['#4c669f', '#3b5998', '#192f6a']}
         style={styles.linearGradient}
       > */}
-        <Image style={styles.tinyLogo} source={require('./download.png')} />
+        <Image style={styles.tinyLogo} source={require('./a.png')} />
         {/* </View> */}
       </LinearGradient>
     </>
