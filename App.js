@@ -1,20 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as eva from '@eva-design/eva';
+import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
+import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { HomeScreen } from './tabs/Home';
+import { Wines } from './tabs/Wines';
+import { BottomTabs } from './tabs/CreateTabs';
+import { SideDrawer } from './CreateSideDrawer';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default () => (
+  <>
+    <ApplicationProvider {...eva} theme={eva.light}>
+      <SafeAreaProvider>
+        <SideDrawer />
+      </SafeAreaProvider>
+    </ApplicationProvider>
+  </>
+);
