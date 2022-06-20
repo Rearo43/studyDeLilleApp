@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { Card } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
+// import { Data } from '../data.json';
 
 function Cards({ arr }) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -68,7 +69,7 @@ function Cards({ arr }) {
                   <View style={styles.img}>
                     <Image
                       style={styles.tinyLogo}
-                      source={require('../imgs/ld20.png')}
+                      source={modalData.img}
                     />
                     <Text style={styles.name}>{modalData.name}</Text>
                     <Text style={styles.name}>AVA: {modalData.ava}</Text>
@@ -104,7 +105,7 @@ function Cards({ arr }) {
 export const Wines = () => {
   return (
     <ScrollView>
-      <Cards arr={data} />
+      <Cards arr={Data} />
     </ScrollView>
   );
 };
@@ -162,7 +163,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const data = [
+const Data = [
   {
     name: 'Le Dessein - 2020',
     qs: "Le Dessein is going to be a Mourvèdre dominant SMG blend. This is actually the lightest red blend DeLille carries. With this wine you're going to get notes of cranberry and cherry. We sold a lot around Thanksgiving and Christmas so that gives you a good idea of what pairs well, light proteins like chicken and turkey.",
@@ -172,7 +173,7 @@ const data = [
     pairings: '',
     rating: '',
     tastingNotes: ['Black Pepper', 'Cranberry', 'Meaty', 'Bacon Fat Component'],
-    img: '"../imgs/ld20.png"',
+    img: require('../imgs/ld20.png'),
   },
   {
     name: 'Roussanne - 2021',
@@ -189,7 +190,7 @@ const data = [
       'Chamomile',
       'Granny Smith Apple',
     ],
-    img: '."./imgs/rou21.png"',
+    img: require('../imgs/rou21.png'),
   },
   {
     name: 'Rosé - 2020',
@@ -200,7 +201,7 @@ const data = [
     pairings: '',
     rating: '',
     tastingNotes: ['Watermelon Jolly Rancher', 'Passion Fruit', ''],
-    img: '"../imgs/rose21.png"',
+    img: require('../imgs/rose21.png'),
   },
   {
     name: 'Doyenne - 2019',
@@ -211,7 +212,7 @@ const data = [
     pairings: '',
     rating: '',
     tastingNotes: '',
-    img: '"../imgs/doy19.png"',
+    img: require('../imgs/doy19.png'),
   },
   {
     name: 'D2 - 2019',
@@ -239,7 +240,7 @@ const data = [
       'Dark Chocolate',
       'Clove',
     ],
-    img: '"../imgs/d219.png"',
+    img: require('../imgs/d219.png'),
   },
   {
     name: 'Roofline Chardonnay - 2020',
@@ -250,7 +251,7 @@ const data = [
     pairings: 'Grilled seafood, cheese plate.',
     rating: '',
     tastingNotes: ['Very slight oak notes'],
-    img: '"../imgs/rlchar20.png"',
+    img: require('../imgs/rlchar20.png'),
   },
   {
     name: 'Harrison Hill - 2019',
@@ -261,26 +262,6 @@ const data = [
     pairings: '',
     rating: '',
     tastingNotes: ['Silky Texture'],
-    img: '"../imgs/hh19.png"',
+    img: require('../imgs/hh19.png'),
   },
 ];
-
-//  <View>
-//    <View style={styles.modalView}>
-//      {/* If I want to switch to using button to go back move open Pressable tag down above Text Back "button" */}
-//      <Pressable onPress={() => setModalVisible(!modalVisible)}>
-//        <LinearGradient
-//          colors={['#4c669f', '#3b5998', '#192f6a']}
-//          style={styles.two}
-//        >
-//          <Image
-//            style={styles.four}
-//            source={require('./download.png')}
-//          />
-//          <View style={styles.three}>
-//            <View style={styles.one}></View>
-//          </View>
-//        </LinearGradient>
-//      </Pressable>
-//    </View>
-//  </View>;

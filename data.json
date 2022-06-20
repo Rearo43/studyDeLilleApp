@@ -13,7 +13,8 @@
         "Cranberry",
         "Meaty",
         "Bacon Fat Component"
-      ]
+      ],
+      "img": "../imgs/ld20.png"
     },
     {
       "name": "Roussanne - 2021",
@@ -29,17 +30,19 @@
         "Lemongrass",
         "Chamomile",
         "Granny Smith Apple"
-      ]
+      ],
+      "img": "rou21.png"
     },
     {
-      "name": "Rosé REAGAN - 2020",
+      "name": "Rosé - 2020",
       "qs": "Our 2021 Rosé was just released during our 30th anniversary weekend. With this Rosé you're going to get vibrant notes of Watermelon and nectarine. That light salmon pink color comes from our wine making team keeping the grape skins on for just about 20hrs.",
       "ava": "Columbia Valley",
       "varietal": "",
       "vineyard": ["Stone Tree", "Boushey", "Angela's", "Ciel du Cheval"],
       "pairings": "",
       "rating": "",
-      "tastingNotes": ["Watermelon Jolly Rancher", "Passion Fruit", ""]
+      "tastingNotes": ["Watermelon Jolly Rancher", "Passion Fruit", ""],
+      "img": "rose21.png"
     },
     {
       "name": "Doyenne - 2019",
@@ -49,7 +52,8 @@
       "vineyard": ["Ciel du Cheval", "Grand Ciel", "Upchurch"],
       "pairings": "",
       "rating": "",
-      "tastingNotes": ""
+      "tastingNotes": "",
+      "img": "doy19.png"
     },
     {
       "name": "D2 - 2019",
@@ -75,7 +79,8 @@
         "Nutmeg",
         "Dark Chocolate",
         "Clove"
-      ]
+      ],
+      "img": "d219.png"
     },
     {
       "name": "Roofline Chardonnay - 2020",
@@ -85,7 +90,8 @@
       "vineyard": [""],
       "pairings": "Grilled seafood, cheese plate.",
       "rating": "",
-      "tastingNotes": ["Very slight oak notes"]
+      "tastingNotes": ["Very slight oak notes"],
+      "img": "rlchar20.png"
     },
     {
       "name": "Harrison Hill - 2019",
@@ -95,7 +101,8 @@
       "vineyard": ["Harrison Hill"],
       "pairings": "",
       "rating": "",
-      "tastingNotes": ["Silky Texture"]
+      "tastingNotes": ["Silky Texture"],
+      "img": "hh19.png"
     }
   ]
 }
